@@ -1,0 +1,62 @@
+@import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+#root {
+  max-width: 1280px;
+  font-size: 16px;
+  text-align: center;
+}
+
+section{
+  background: url(/src/assets/Background.png) top center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  height: max-content;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+section::before {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  content: "";
+  background: rgba(241, 208, 236, 0.5);
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+section * {
+  z-index: 1;
+  position:relative;
+}
+
+.link-button{
+  display: inline-block;
+  margin: 0 1rem;
+  width: 150px;
+  padding: 0.5rem;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 100%;
+  background-color: #804ca8;
+  border: 2px solid #4d0c7e;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.link-button:hover{
+  background-color: #9f6cc7;
+  box-shadow: 1px 1px 2px 1px gray;
+  color: white;
+}
+
+.link-button:active{
+  background-color: #6d4988;
+}

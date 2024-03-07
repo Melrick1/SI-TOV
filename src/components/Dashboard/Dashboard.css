@@ -1,0 +1,137 @@
+.navbar{
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    width: 16rem;
+    height: 100%;
+    background-color: #804ca8;
+    transition: background-color 500ms linear;
+    border-right: 2px solid black ;
+}
+
+.nav-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 95%;
+    height: 4rem;
+    text-decoration: none;
+    color: lightgray;
+    outline: none;
+    border-bottom: #4d0c7e solid 1.9px;
+}
+
+.nav-link span{
+    margin-left: 2rem;
+}
+
+.nav-item i{
+    font-size: 2.5rem;
+    width: 5rem;
+    min-width: 5rem; /* Stops width from changing during transition */
+}
+
+.active{
+    background: radial-gradient(circle at 50% 50%, #6d4988, #804ca8 140%);
+}
+
+.active .nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+.nav-item:not(.active):hover{
+    /*background-color: #9f6cc7;*/
+    background: radial-gradient(circle at 50% 50%, #9f6cc7, #804ca8 120%);
+}
+
+.menu-tab{
+    display: none;
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.dashboard{
+    top: 0;
+    position: absolute;
+    margin-left: 16rem;
+    width: calc(100% - 16rem);
+    height: max-content;
+}
+
+.chart-container{
+    width: 80%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background-color: lightgray;
+    border-radius: 10px;
+    border: 2px solid rgb(83, 75, 81) ;
+}
+
+@media only screen and (max-width: 800px){
+    /*Navbar*/
+    .navbar{
+        top: 0;
+        margin-left: -17rem;
+        transition: margin 200ms linear;
+        transition: background-color 200ms linear;
+        background-color: rgba(128, 76, 168, 0.7);
+        backdrop-filter: blur(5px);
+    }
+
+    .active{
+        background: radial-gradient(circle at 50% 50%, rgba(109, 73, 136, 0.6), rgba(128, 76, 168, 0.6) 140%);
+    }
+
+    /* Menu button */
+    .menu-tab{
+        display: block;
+        background-color: #804ca8;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .menu-tab i{
+        display: inline;
+        font-size: 1.9rem;
+        color: lightgray;
+    }
+
+    .menu-tab i:hover{
+        color: white;
+    }
+
+    /* Nav activated */
+    .nav-active{
+        margin: 0;
+    }
+
+    .dashboard{
+        width: 100%;
+        margin-left: 0;
+        z-index: 0;
+    }
+
+    .chart-container{
+        width: 85%;
+    }
+}
