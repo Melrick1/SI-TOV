@@ -1,3 +1,7 @@
+.statistics{
+    background: none;
+}
+
 .navbar{
     left: 0;
     position: fixed;
@@ -7,6 +11,41 @@
     background-color: #804ca8;
     transition: background-color 500ms linear;
     border-right: 2px solid black ;
+    overflow-y: scroll;
+    color: white;
+}
+
+.log-out{
+    position: absolute;
+    z-index: 5;
+    width: 3rem;
+}
+.log-out i{
+    display: block;
+    font-size: 30px;
+    margin-left: 0.5rem;
+    text-align: left;
+    color: lightgray;
+}
+
+.log-out i:hover{
+    color: white;
+}
+
+.user{
+    margin-top: 0rem;
+}
+
+.user i{
+    font-size: 5rem;
+}
+
+.profile h3{
+    margin: 0 0 1rem 0;
+}
+
+.profile{
+    border-bottom: #4d0c7e solid 1.9px;
 }
 
 .nav-list{
@@ -74,7 +113,22 @@
     position: absolute;
     margin-left: 16rem;
     width: calc(100% - 16rem);
+    min-height:100vh;
     height: max-content;
+    background: url(/src/assets/Background.png) top center;
+}
+
+.dashboard:before {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: "";
+    background: rgba(241, 208, 236, 0.5);
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
 }
 
 .chart-container{
@@ -84,6 +138,14 @@
     background-color: lightgray;
     border-radius: 10px;
     border: 2px solid rgb(83, 75, 81) ;
+}
+
+.piechart{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 15rem);
+    width: calc(100% - 3rem);
 }
 
 @media only screen and (max-width: 800px){

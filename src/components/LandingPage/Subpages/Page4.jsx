@@ -19,37 +19,41 @@ const Page4 = () => {
                 <Questions
                 n={25}
                 question="Saya merasa puas karena kebutuhan saya untuk mencoba produk terpenuhi dengan menggunakan fitur AR di e-commerce."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(25, selectedAnswer)}
                 />
                 <Questions
                 n={26}
                 question="Saya puas dengan kesesuaian visualisasi produk saat menggunakan fitur AR di e-commerce."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(26, selectedAnswer)}
                 />
                 <Questions
                 n={27}
                 question="Pengalaman menggunakan fitur AR sesuai dengan ekspektasi saya."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(27, selectedAnswer)}
                 />
                 <Questions
                 n={28}
                 question="Secara keseluruhan, saya merasa puas menggunakan fitur AR di e-commerce untuk mencoba suatu produk."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(28, selectedAnswer)}
                 />
             </div>
@@ -61,37 +65,41 @@ const Page4 = () => {
                 <Questions
                 n={29}
                 question="Saya bermaksud untuk terus menggunakan fitur AR dari aplikasi ini."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(29, selectedAnswer)}
                 />
                 <Questions
                 n={30}
                 question="Saya akan sering menggunakan fitur AR dari aplikasi ini di masa mendatang."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(30, selectedAnswer)}
                 />
                 <Questions
                 n={31}
                 question="Saya akan merekomendasikan fitur AR aplikasi ini kepada orang lain."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(31, selectedAnswer)}
                 />
                 <Questions
                 n={32}
                 question="Saya akan menggunakan fitur AR dari aplikasi ini secara rutin di masa mendatang."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(32, selectedAnswer)}
                 />
             </div>

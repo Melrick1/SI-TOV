@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Chart } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
-import { Bar } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 import 'chart.js/auto';
 import PropTypes from 'prop-types';
 
 Chart.register(ChartDataLabels);
 
-const BarChart = ({ questionNumber, answersLists }) => {
+const PieChart = ({answersLists}) => {
     const [optionCounts, setOptionCounts] = useState({
         'Sangat Setuju': 0,
         'Cukup Setuju': 0,
@@ -17,7 +17,7 @@ const BarChart = ({ questionNumber, answersLists }) => {
     });
 
     useEffect(() => {
-        const answers = answersLists[questionNumber - 1];
+        const answers = answersLists;
 
         if (answers && answers.length > 0) {
             const counts = answers.reduce((accumulator, count) => {
@@ -34,10 +34,7 @@ const BarChart = ({ questionNumber, answersLists }) => {
     }, [answersLists]);
 
     useEffect(() => {
-        // If at least one count is not zero, it logs
-        if (Object.values(optionCounts).some(count => count !== 0)) {
-            console.log(`Question-${questionNumber}:`, optionCounts);
-        }
+        console.log(answersLists)
     }, [optionCounts]);
 
     const data = {
@@ -45,9 +42,9 @@ const BarChart = ({ questionNumber, answersLists }) => {
         datasets: [{
             label : 'answer',
             data: Object.values(optionCounts),
-            backgroundColor: '#b975ae',
-            borderColor: '#5c365c',
-            borderWidth: 2,
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50'],
+            borderColor: 'black',
+            borderWidth: 1.5,
         }],
     };
     
@@ -56,10 +53,9 @@ const BarChart = ({ questionNumber, answersLists }) => {
         scales: {
             x: {
               display: false,
-              grid: { display: false }, 
             },
             y: {
-                grid: { display: false },
+                display: false,
                 ticks: {font: {
                     size: 16,       
                     weight: 'bold', 
@@ -67,7 +63,7 @@ const BarChart = ({ questionNumber, answersLists }) => {
             },
         },
         plugins: {
-            legend: { display: false },
+            legend: { display: true },
             datalabels: {
                 anchor: 'end',
                 align: 'end',
@@ -75,27 +71,28 @@ const BarChart = ({ questionNumber, answersLists }) => {
                     size: 16,       // Set the font size
                     weight: 'bold', // Set the font weight (e.g., 'normal', 'bold')
                 },
+                formatter: (value, context) => {
+                    const total = context.chart.data.datasets[0].data.reduce((acc, val) => acc + val, 0);
+                    const percentage = ((value / total) * 100).toFixed(2) + '%';
+                    return percentage;
+                },
+                color: 'black',
             }
         },
-        aspectRatio: 5/2,
         layout: {
-            padding: {
-                right: 24, // Adjust top padding for the chart container
-            },
+            padding: 24
         },
     };
     
     return (
-        <div className="chart-container">
-            <h3>Question {questionNumber}</h3>
-            <Bar data={data} options={options} />
+        <div className='piechart'>
+            <Pie data={data} options={options} />
         </div>
     )
 };
 
-BarChart.propTypes = {
-    questionNumber: PropTypes.number.isRequired,
+PieChart.propTypes = {
     answersLists: PropTypes.array.isRequired
 };
 
-export default BarChart;
+export default PieChart;

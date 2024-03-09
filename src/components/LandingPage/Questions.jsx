@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { usePageState } from '../../PageStateContext';
 import PropTypes from 'prop-types';
 
-const Questions = ({n, question, input1, input2, input3, input4, onAnswerChange}) => {
+const Questions = ({n, question, input1, input2, input3, input4, input5, onAnswerChange}) => {
     const { answers } = usePageState();
     const [checkedAnswer, setCheckedAnswer] = useState('')
 
@@ -44,6 +44,10 @@ const Questions = ({n, question, input1, input2, input3, input4, onAnswerChange}
                     <input type="radio" name={`question-${n}`} value={input4} onChange={handleAnswerChange} checked={checkedAnswer === input4}  />
                     <span>{input4}</span>
                 </div>
+                <div className='input-checks'>
+                    <input type="radio" name={`question-${n}`} value={input5} onChange={handleAnswerChange} checked={checkedAnswer === input5}  />
+                    <span>{input5}</span>
+                </div>
             </div>
         </div>
     );
@@ -56,6 +60,7 @@ Questions.propTypes = {
     input2: PropTypes.string.isRequired,
     input3: PropTypes.string.isRequired,
     input4: PropTypes.string.isRequired,
+    input5: PropTypes.string.isRequired,
     onAnswerChange: PropTypes.func.isRequired
 };
 

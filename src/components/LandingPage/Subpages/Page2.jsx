@@ -19,37 +19,41 @@ const Page2 = () => {
                 <Questions
                 n={9}
                 question="Saya mendapatkan informasi produk secara detail dengan menggunakan fitur AR pada aplikasi e-commerce."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(9, selectedAnswer)}
                 />
                 <Questions
                 n={10}
                 question="Saya mendapatkan informasi produk secara lengkap dengan menggunakan fitur AR pada aplikasi e-commerce."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(10, selectedAnswer)}
                 />
                 <Questions
                 n={11}
                 question="Saya dapat mengambil keputusan berbelanja dari informasi yang saya peroleh ketika menggunakan fitur AR pada aplikasi e-commerce."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(11, selectedAnswer)}
                 />
                 <Questions
                 n={12}
                 question="Saya dapat membandingkan informasi produk dengan produk lain ketika menggunakan fitur AR pada aplikasi e-commerce."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(12, selectedAnswer)}
                 />
             </div>
@@ -61,37 +65,41 @@ const Page2 = () => {
                 <Questions
                 n={13}
                 question="Saya merasa fitur AR pada aplikasi e-commerce menampilkan visualisasi produk dengan cepat."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(13, selectedAnswer)}
                 />
                 <Questions
                 n={14}
                 question="Saya merasa fitur AR pada aplikasi e-commerce dapat diandalkan untuk menjalankan fungsinya dengan baik tanpa ada kendala/error pada sistem."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(14, selectedAnswer)}
                 />
                 <Questions
                 n={15}
                 question="Saya merasa fitur AR di e-commerce berfungsi sesuai tujuan saya."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(15, selectedAnswer)}
                 />
                 <Questions
                 n={16}
                 question="Saya berasumsi tidak ada masalah dalam menggunakan fitur AR pada aplikasi e-commerce."
-                input1="Option 1"
-                input2="Option 2"
-                input3="Option 3"
-                input4="Option 4"
+                input1="Sangat Setuju"
+                input2="Cukup Setuju"
+                input3="Netral"
+                input4="Kurang Setuju"
+                input5="Tidak Setuju"
                 onAnswerChange={(selectedAnswer) => UpdateList(16, selectedAnswer)}
                 />
             </div>

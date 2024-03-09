@@ -3,7 +3,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+import { getAuth, onAuthStateChanged  } from "firebase/auth";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -21,8 +21,21 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-// Initialize Firebase Authentication and get a reference to the service
-export const Auth = getAuth(app);
-
 // Initialize Cloud Firestore and get a reference to the service
 export const DB = getFirestore(app);
+
+// Initialize Firebase Authentication and get a reference to the service
+const Auth = getAuth(app);
+
+// Observer to check the user's authentication state
+onAuthStateChanged(Auth, (user) => {
+  if (user) {
+    // User is signed in
+    console.log('User is signed in:', user.uid);
+  } else {
+    // User is signed out
+    console.log('User is signed out');
+  }
+});
+
+export { Auth };

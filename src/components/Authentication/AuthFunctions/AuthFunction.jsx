@@ -3,10 +3,10 @@ import { collection, getDocs, setDoc, query, where, doc } from 'firebase/firesto
 import { Auth, DB } from '../../../Firebase.js';
 
 {/* User Authentication */}
-const Authenticate  = async (email, password, navigate, setErrorMessage) => {
+const Authenticate = async (email, password, navigate, setErrorMessage) => {
   try {
     // Sign in with email and password
-    const userCredential = await signInWithEmailAndPassword(Auth, email, password);
+    await signInWithEmailAndPassword(Auth, email, password);
 
     navigate('/dashboard')
   }

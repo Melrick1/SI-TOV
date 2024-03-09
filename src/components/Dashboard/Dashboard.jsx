@@ -3,6 +3,7 @@ import BarChart from "./SubComponents/BarChart.jsx";
 import FetchAnswers from "./FetchAnswers.jsx"
 import "./Dashboard.css"
 import { useEffect, useState } from 'react';
+import PieChart from "./SubComponents/PieChart.jsx";
 
 const Dashboard = () => {
     const [Data, setData] = useState([]);
@@ -28,6 +29,7 @@ const Dashboard = () => {
             '#kepuasan': 7,
             '#nilai-Keberlanjutan': 8,
             '#niat-Membeli': 9,
+            '#semua' : 10,
         };
         setActivePart(hashMappings[hash] || 1);
     };
@@ -59,13 +61,16 @@ const Dashboard = () => {
     },[activePart])
 
     return(
-        <section>            
+        <section className="statistics">            
             <Navigation></Navigation>
             <div className="dashboard">
                 <h1>Dashboard</h1>
                 {questionList().map((questionNumber) => (
                     <BarChart key={questionNumber} questionNumber={questionNumber} answersLists={Data} />
                 ))}
+                {activePart === 10 && 
+                    <PieChart answersLists={Data}/>
+                }
             </div>
         </section>
     )
