@@ -21,16 +21,16 @@ const Navigation = () => {
   }, []); 
 
   const navigationItems = [
-    { id: 'interaktivitas', label: 'Interaktivitas' },
-    { id: 'kejelasan', label: 'Kejelasan' },
-    { id: 'keinformatifan-produk', label: 'Keinformatifan Produk' },
-    { id: 'kualitas-Sistem', label: 'Kualitas Sistem' },
-    { id: 'kebaruan', label: 'Kebaruan' },
-    { id: 'nilai-Hedonis', label: 'Nilai Hedonis' },
-    { id: 'kepuasan', label: 'Kepuasan' },
-    { id: 'nilai-Keberlanjutan', label: 'Nilai Keberlanjutan' },
-    { id: 'niat-Membeli', label: 'Niat Membeli' },
-    { id: 'semua', label: 'Semua' },
+    { id: 'interaktivitas', label: 'Interactivity' },
+    { id: 'kejelasan', label: 'Vividness' },
+    { id: 'keinformatifan-produk', label: 'Novelty' },
+    { id: 'kualitas-Sistem', label: 'System Quality' },
+    { id: 'kebaruan', label: 'Product Informativeness' },
+    { id: 'nilai-Hedonis', label: 'Hedonic Value' },
+    { id: 'kepuasan', label: 'Satisfaction' },
+    { id: 'nilai-Keberlanjutan', label: 'Continuance Intention' },
+    { id: 'niat-Membeli', label: 'Purchase Intention' },
+    { id: 'semua', label: 'Overview' },
   ];
 
   const handleItemClick = (itemId) => {
