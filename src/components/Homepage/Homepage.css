@@ -62,7 +62,7 @@
 }
 
 .homecard-buttons{
-    margin: 5rem auto 0 auto;
+    margin: 3rem auto 0 auto;
     width: 200px;
     display: flex;
     gap: 1rem;
@@ -100,6 +100,6 @@
     }
 
     .title h1{
-        font-size: 20px;
+        font-size: 28px;
     }
 }

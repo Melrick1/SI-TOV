@@ -3,7 +3,6 @@ import { Chart } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Pie } from 'react-chartjs-2';
 import 'chart.js/auto';
-import PropTypes from 'prop-types';
 
 Chart.register(ChartDataLabels);
 
@@ -17,7 +16,7 @@ const PieChart = ({answersLists}) => {
     });
 
     useEffect(() => {
-        const answers = answersLists;
+        const answers = [].concat(...answersLists);
 
         if (answers && answers.length > 0) {
             const counts = answers.reduce((accumulator, count) => {
@@ -29,12 +28,12 @@ const PieChart = ({answersLists}) => {
             setOptionCounts(prevCounts => ({
                 ...prevCounts,
                 ...counts,
-              }));
+            }));
         }
     }, [answersLists]);
 
     useEffect(() => {
-        console.log(answersLists)
+        console.log(optionCounts)
     }, [optionCounts]);
 
     const data = {
@@ -42,7 +41,7 @@ const PieChart = ({answersLists}) => {
         datasets: [{
             label : 'answer',
             data: Object.values(optionCounts),
-            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50'],
+            backgroundColor: ['#4CAF50', '#2196F3', '#FFC107', '#FF5722', '#9C27B0'], //['#10a326', '#48bf11', '#ebe302', '#eb910c', '#e31f05']
             borderColor: 'black',
             borderWidth: 1.5,
         }],
@@ -63,24 +62,30 @@ const PieChart = ({answersLists}) => {
             },
         },
         plugins: {
-            legend: { display: true },
+            legend: { 
+                display: true,
+                position: 'bottom',
+                labels: {
+                    color: 'black',
+                },
+            },
             datalabels: {
                 anchor: 'end',
                 align: 'end',
                 font: {
-                    size: 16,       // Set the font size
-                    weight: 'bold', // Set the font weight (e.g., 'normal', 'bold')
+                    size: 16,       
+                    weight: 'bold', 
                 },
                 formatter: (value, context) => {
                     const total = context.chart.data.datasets[0].data.reduce((acc, val) => acc + val, 0);
-                    const percentage = ((value / total) * 100).toFixed(2) + '%';
-                    return percentage;
+                    const percentage = ((value / total) * 100).toFixed(2);
+                    return percentage > 0 ? `${percentage}%` : '';
                 },
                 color: 'black',
             }
         },
         layout: {
-            padding: 24
+            padding: 28
         },
     };
     
@@ -89,10 +94,6 @@ const PieChart = ({answersLists}) => {
             <Pie data={data} options={options} />
         </div>
     )
-};
-
-PieChart.propTypes = {
-    answersLists: PropTypes.array.isRequired
 };
 
 export default PieChart;

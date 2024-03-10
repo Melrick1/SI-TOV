@@ -3,7 +3,6 @@ import { Chart } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
-import PropTypes from 'prop-types';
 
 Chart.register(ChartDataLabels);
 
@@ -29,7 +28,7 @@ const BarChart = ({ questionNumber, answersLists }) => {
             setOptionCounts(prevCounts => ({
                 ...prevCounts,
                 ...counts,
-              }));
+            }));
         }
     }, [answersLists]);
 
@@ -91,11 +90,6 @@ const BarChart = ({ questionNumber, answersLists }) => {
             <Bar data={data} options={options} />
         </div>
     )
-};
-
-BarChart.propTypes = {
-    questionNumber: PropTypes.number.isRequired,
-    answersLists: PropTypes.array.isRequired
 };
 
 export default BarChart;
