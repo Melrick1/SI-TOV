@@ -2,7 +2,7 @@
 A questionnaire site about Virtual Try Out for Customers.
 Sellers can see answers Dashboard.
 
-To view the demo : [Click here](https://research-vto.vercel.app/)
+To view the demo : [Click here](https://vto-questionnaire.netlify.app)
 
 # How to get started
 
